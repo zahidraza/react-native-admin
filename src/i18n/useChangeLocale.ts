@@ -1,8 +1,6 @@
-import useStore from '../store/useStore';
+import { useStore } from '../store/useStore';
 
-const useChangeLocale = () => {
+export const useChangeLocale = () => {
   const [, setLocale] = useStore('@locale');
   return setLocale;
 };
-
-export default useChangeLocale;

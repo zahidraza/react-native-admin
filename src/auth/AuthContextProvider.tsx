@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as SecureStore from 'expo-secure-store';
 
-import HttpError from '../HttpError';
+import { HttpError } from '../HttpError';
 import type {
   Auth,
   AuthProvider,
@@ -11,9 +11,9 @@ import type {
   Notification,
 } from '../types';
 import { tryParse, isEmpty } from '../util/helpers';
-import useStore from '../store/useStore';
+import { useStore } from '../store/useStore';
 
-import AuthContext from './AuthContext';
+import { AuthContext } from './AuthContext';
 
 export interface AuthContextProviderProps {
   authProvider?: AuthProvider;

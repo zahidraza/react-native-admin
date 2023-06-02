@@ -1,7 +1,7 @@
 import * as React from 'react';
 import isEqual from 'lodash.isequal';
 
-const useDeepEffect = (
+export const useDeepEffect = (
   effect: React.EffectCallback,
   deps?: React.DependencyList | undefined
 ) => {
@@ -21,5 +21,3 @@ const useDeepEffect = (
   /* eslint-disable-next-line react-hooks/exhaustive-deps */
   React.useEffect(effect, depsRef.current);
 };
-
-export default useDeepEffect;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as SecureStore from 'expo-secure-store';
 
-import useAuthProvider from './useAuthProvider';
+import { useAuthProvider } from './useAuthProvider';
 import type { UserIdentity } from '../types';
 import { isEmpty } from '../util/helpers';
 
@@ -13,7 +13,7 @@ const defaultIdentity: UserIdentity = {
   roleList: [],
 };
 
-const useIdentity = () => {
+export const useIdentity = () => {
   const [identity, setIdentity] = React.useState<UserIdentity>(defaultIdentity);
   const { userIdentity, getIdentity } = useAuthProvider();
   React.useEffect(() => {
@@ -33,5 +33,3 @@ const useIdentity = () => {
   }, [userIdentity, getIdentity, setIdentity]);
   return identity;
 };
-
-export default useIdentity;

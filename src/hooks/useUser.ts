@@ -1,10 +1,10 @@
-import useIdentity from '../auth/useIdentity';
-import useQuery from '../dataProvider/useQuery';
+import { useIdentity } from '../auth/useIdentity';
+import { useQuery } from '../dataProvider/useQuery';
 import type { UserIdentity } from '../types';
 import { isEmpty } from '../util/helpers';
-import useDeepMemo from './useDeepMemo';
+import { useDeepMemo } from './useDeepMemo';
 
-const useUser = (version?: number | string): UserIdentity => {
+export const useUser = (version?: number | string): UserIdentity => {
   const identity = useIdentity();
 
   const { data: user = {} } = useQuery(
@@ -25,5 +25,3 @@ const useUser = (version?: number | string): UserIdentity => {
 
   return memoizedUser;
 };
-
-export default useUser;

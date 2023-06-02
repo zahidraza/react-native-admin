@@ -11,13 +11,13 @@ import type {
   Record,
   Variables,
 } from '../types';
-import useAuth from '../auth/useAuth';
-import HttpError from '../HttpError';
-import useStore from '../store/useStore';
-import useDataProvider from './useDataProvider';
+import { useAuth } from '../auth/useAuth';
+import { HttpError } from '../HttpError';
+import { useStore } from '../store/useStore';
+import { useDataProvider } from './useDataProvider';
 import type { AxiosError } from 'axios';
 
-function useMutation<TVariables = Variables, TData = Record>(
+export function useMutation<TVariables = Variables, TData = Record>(
   options: DataProviderOptions,
   mutationOptions: Omit<
     UseMutationOptions<TData, AxiosError, TVariables, unknown>,
@@ -71,5 +71,3 @@ function useMutation<TVariables = Variables, TData = Record>(
 
   return mutationResult;
 }
-
-export default useMutation;

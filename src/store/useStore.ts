@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import useStoreContext from './useStoreContext';
+import { useStoreContext } from './useStoreContext';
 import useEventCallback from '../util/useEventCallback';
-import useDeepEffect from '../hooks/useDeepEffect';
+import { useDeepEffect } from '../hooks/useDeepEffect';
 
 export type useStoreResult<T = any> = [
   T | undefined,
@@ -14,7 +14,7 @@ export type useStoreResult<T = any> = [
 //   (value: T | ((value: T) => void), defaultValue?: T) => void
 // ];
 
-const useStore = <T = any>(
+export const useStore = <T = any>(
   key: string,
   defaultValue?: T
 ): useStoreResult<T> => {
@@ -58,5 +58,3 @@ const useStore = <T = any>(
   );
   return [value, set];
 };
-
-export default useStore;

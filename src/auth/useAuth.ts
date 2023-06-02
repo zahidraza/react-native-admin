@@ -1,6 +1,6 @@
-import useAuthProvider from './useAuthProvider';
+import { useAuthProvider } from './useAuthProvider';
 
-const useAuth = () => {
+export const useAuth = () => {
   const {
     authenticating,
     accessToken,
@@ -18,5 +18,3 @@ const useAuth = () => {
     logout,
   };
 };
-
-export default useAuth;

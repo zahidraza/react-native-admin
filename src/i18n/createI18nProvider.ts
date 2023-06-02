@@ -3,7 +3,7 @@ import * as Localization from 'expo-localization';
 import { I18n } from 'i18n-js';
 import type { Translations } from './types';
 
-const createI18nProvider = (
+export const createI18nProvider = (
   translations: Translations,
   supportedLocales: Locale[]
 ) => {
@@ -31,5 +31,3 @@ const createI18nProvider = (
 
   return i18nProvider;
 };
-
-export default createI18nProvider;

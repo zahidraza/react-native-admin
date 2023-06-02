@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import I18nContext from './I18nContext';
-import useStore from '../store/useStore';
+import { I18nContext } from './I18nContext';
+import { useStore } from '../store/useStore';
 import type { I18nProvider } from '../types';
 
 export interface I18nContextProviderProps {

@@ -2,8 +2,8 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 import jwtDecode from 'jwt-decode';
 import type { ApiUrl, AuthProvider, LoginResult, UserIdentity } from '../types';
-import Base64 from '../util/Base64';
-import handleAuthError from '../util/handleAuthError';
+import { Base64 } from '../util/Base64';
+import { handleAuthError } from '../util/handleAuthError';
 import { isEmpty, isTrue } from '../util/helpers';
 
 const defaultIdentity: UserIdentity = {

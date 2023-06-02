@@ -1,7 +1,7 @@
 import * as React from 'react';
-import useDeepEffect from './useDeepEffect';
+import { useDeepEffect } from './useDeepEffect';
 
-function usePrevious(value: any) {
+export function usePrevious(value: any) {
   // The ref object is a generic container whose current property is mutable ...
   // ... and can hold any value, similar to an instance property on a class
   const ref = React.useRef();
@@ -12,5 +12,3 @@ function usePrevious(value: any) {
   // Return previous value (happens before update in useEffect above)
   return ref.current;
 }
-
-export default usePrevious;

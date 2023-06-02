@@ -1,8 +1,6 @@
-import useStore from '../store/useStore';
+import { useStore } from '../store/useStore';
 
-const useColorMode = () => {
+export const useColorMode = () => {
   const [colorMode] = useStore('@color-mode');
   return colorMode;
 };
-
-export default useColorMode;

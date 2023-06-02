@@ -1,8 +1,6 @@
-import useAuthProvider from './useAuthProvider';
+import { useAuthProvider } from './useAuthProvider';
 
-const useActiveRole = () => {
+export const useActiveRole = () => {
   const { role } = useAuthProvider();
   return role;
 };
-
-export default useActiveRole;

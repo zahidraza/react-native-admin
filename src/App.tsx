@@ -7,11 +7,11 @@ import { useAppState } from '@react-native-community/hooks';
 import * as Updates from 'expo-updates';
 
 import { AuthContextProvider } from './auth/AuthContextProvider';
-import DataProviderContext from './dataProvider/DataProviderContext';
+import { DataProviderContext } from './dataProvider/DataProviderContext';
 import { I18nContextProvider } from './i18n/I18nContextProvider';
 import { StoreContextProvider } from './store/StoreContextProvider';
-import useOnlineManager from './hooks/useOnlineManager';
-import usePrevious from './hooks/usePrevious';
+import { useOnlineManager } from './hooks/useOnlineManager';
+import { usePrevious } from './hooks/usePrevious';
 import type { AppProps } from './types';
 
 const updateAsync = async () => {

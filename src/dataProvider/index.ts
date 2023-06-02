@@ -1,9 +1,6 @@
-import DataProviderContext from './DataProviderContext';
-import useDataProvider from './useDataProvider';
-import useList from './useList';
-import useQuery from './useQuery';
-import useMutation from './useMutation';
-
+export * from './DataProviderContext';
+export * from './useDataProvider';
+export * from './useList';
+export * from './useQuery';
+export * from './useMutation';
 export * from './createDataProvider';
-
-export { DataProviderContext, useDataProvider, useList, useQuery, useMutation };

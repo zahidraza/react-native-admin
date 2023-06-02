@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 import type { ApiUrl, DataProvider, DataProviderOptions } from '../types';
-import handleApiError from '../util/handleApiError';
+import { handleApiError } from '../util/handleApiError';
 import { isEmpty, isTrue } from '../util/helpers';
 
 export interface DataOptions {

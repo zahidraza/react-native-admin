@@ -1,5 +1,5 @@
 import * as React from 'react';
-import StoreContext from './StoreContext';
+import { StoreContext } from './StoreContext';
 import type { Store } from './types';
 
 export interface StoreContextProviderProps {

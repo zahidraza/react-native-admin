@@ -1,7 +1,7 @@
 import type { AxiosError } from 'axios';
-import HttpError from '../HttpError';
+import { HttpError } from '../HttpError';
 
-const handleAuthError = (error: AxiosError): HttpError => {
+export const handleAuthError = (error: AxiosError): HttpError => {
   let statusCode: number = 0,
     statusText: string = '',
     title: string = '',
@@ -49,5 +49,3 @@ const handleAuthError = (error: AxiosError): HttpError => {
   }
   return new HttpError(message, statusCode, statusText, title);
 };
-
-export default handleAuthError;

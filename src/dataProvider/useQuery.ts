@@ -8,14 +8,14 @@ import type {
   Notification,
   Record,
 } from '../types';
-import useAuth from '../auth/useAuth';
-import HttpError from '../HttpError';
-import useStore from '../store/useStore';
-import useDataProvider from './useDataProvider';
-import useDeepEffect from '../hooks/useDeepEffect';
-import usePrevious from '../hooks/usePrevious';
+import { useAuth } from '../auth/useAuth';
+import { HttpError } from '../HttpError';
+import { useStore } from '../store/useStore';
+import { useDataProvider } from './useDataProvider';
+import { useDeepEffect } from '../hooks/useDeepEffect';
+import { usePrevious } from '../hooks/usePrevious';
 
-function useQuery<TQueryFnData = Record, TData = Record>(
+export function useQuery<TQueryFnData = Record, TData = Record>(
   key: QueryKey,
   options: DataProviderOptions,
   queryOptions?: QueryOptions<TQueryFnData, TData>
@@ -67,5 +67,3 @@ function useQuery<TQueryFnData = Record, TData = Record>(
 
   return queryResult;
 }
-
-export default useQuery;

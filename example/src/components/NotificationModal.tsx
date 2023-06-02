@@ -1,9 +1,8 @@
-import { isEmpty } from 'lodash';
 import * as React from 'react';
 
 import { Modal, Text, Pressable, View, ScrollView, StyleSheet } from 'react-native';
 
-import { useStore } from '@jazasoft/react-native-admin';
+import { isEmpty, useStore } from '@jazasoft/react-native-admin';
 import type { Notification } from '@jazasoft/react-native-admin';
 // import { Notification } from "../types";
 

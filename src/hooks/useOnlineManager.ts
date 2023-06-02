@@ -3,7 +3,7 @@ import NetInfo from '@react-native-community/netinfo';
 import { onlineManager } from 'react-query';
 import { Platform } from 'react-native';
 
-function useOnlineManager() {
+export function useOnlineManager() {
   React.useEffect(() => {
     // React Query already supports on reconnect auto refetch in web browser
     if (Platform.OS !== 'web') {
@@ -18,5 +18,3 @@ function useOnlineManager() {
     return undefined;
   }, []);
 }
-
-export default useOnlineManager;

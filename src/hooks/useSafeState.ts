@@ -1,7 +1,7 @@
 import * as React from 'react';
 import isEqual from 'lodash.isequal';
 
-export default function useSafeState<T>(initialState: T) {
+export function useSafeState<T>(initialState: T) {
   const [state, setState] = React.useState<T>(initialState);
 
   const mountedRef = React.useRef(false);
