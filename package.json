@@ -1,7 +1,7 @@
 {
   "name": "@jazasoft/react-native-admin",
-  "version": "0.1.0",
-  "description": "test",
+  "version": "0.2.10",
+  "description": "Framework for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -40,15 +40,19 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/jaza-soft/react-native-admin.git",
-  "author": "razamd <zahid.raza@jazasoft.com> (https://jazasoft.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaza-soft/react-native-admin.git"
+  },
+  "author": "Md Zahid Raza <zahid.raza@jazasoft.com> (https://github.com/zahidraza)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jaza-soft/react-native-admin.git/issues"
   },
   "homepage": "https://github.com/jaza-soft/react-native-admin.git#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
@@ -129,6 +133,7 @@
       "@react-native-community",
       "prettier"
     ],
+    "parser": "@typescript-eslint/parser",
     "rules": {
       "prettier/prettier": [
         "error",
