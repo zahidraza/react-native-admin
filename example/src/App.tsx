@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Text } from 'react-native';
-import { multiply, App } from 'react-native-admin';
+import { multiply, App, Button } from 'react-native-admin';
 
 export default function MyApp() {
   const [result, setResult] = React.useState<number | undefined>();
@@ -13,6 +13,7 @@ export default function MyApp() {
   return (
     <App>
       <Text>Result: {result}</Text>
+      <Button label="Click" onPress={() => console.log('button clicked')} />
     </App>
   );
 }
