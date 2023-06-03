@@ -1,9 +1,10 @@
 import * as React from 'react';
+import { isEqual } from '../util';
 
-export function useDeepMemo<T>(
-  memoFun: () => T,
-  deps: React.DependencyList | undefined
-) {
+export const useDeepEffect = (
+  effect: React.EffectCallback,
+  deps?: React.DependencyList | undefined
+) => {
   // use a ref to keep track of deps across renders
   const depsRef = React.useRef<React.DependencyList>();
 
@@ -13,10 +14,10 @@ export function useDeepMemo<T>(
   // the array passed to `useEffect` will be the exact
   // same array as before so the basic strict equality
   // will work
-  if (!depsRef || depsRef.current !== deps) {
+  if (!depsRef || !isEqual(depsRef.current, deps)) {
     depsRef.current = deps;
   }
 
   /* eslint-disable-next-line react-hooks/exhaustive-deps */
-  return React.useMemo(memoFun, depsRef.current);
-}
+  React.useEffect(effect, depsRef.current);
+};
