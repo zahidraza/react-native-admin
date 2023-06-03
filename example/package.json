@@ -25,7 +25,6 @@
     "expo-splash-screen": "^0.18.2",
     "expo-status-bar": "~1.4.4",
     "expo-updates": "^0.16.4",
-    "lodash": "^4.17.21",
     "native-base": "^3.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",

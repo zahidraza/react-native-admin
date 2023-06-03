@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function useDeepMemo<T>(
+export function useDeepMemo<T>(
   memoFun: () => T,
   deps: React.DependencyList | undefined
 ) {
@@ -20,5 +20,3 @@ function useDeepMemo<T>(
   /* eslint-disable-next-line react-hooks/exhaustive-deps */
   return React.useMemo(memoFun, depsRef.current);
 }
-
-export default useDeepMemo;
