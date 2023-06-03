@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import type { I18nProvider } from '../types';
 import { I18nContext } from './I18nContext';

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import type { AxiosError } from 'axios';
 import { QueryKey, useQuery, useQueryClient } from 'react-query';
 
@@ -9,7 +9,7 @@ import type {
   Record,
 } from '../types';
 import { useAuth } from '../auth/useAuth';
-import { HttpError } from '../HttpError';
+// import { HttpError } from '../HttpError';
 import { useStore } from '../store/useStore';
 import { useDataProvider } from './useDataProvider';
 import { useDeepEffect } from '../hooks/useDeepEffect';
@@ -45,15 +45,16 @@ export function useList<TData = Record[]>(
   }, [version]);
 
   //** Handle Error Notification **//
-  const error = queryResult.error;
-  React.useEffect(() => {
-    if (error instanceof HttpError) {
-      setNotification({ title: error.title, message: error.message });
-    }
-  }, [error, setNotification]);
+  // const error = queryResult.error;
+  // React.useEffect(() => {
+  //   if (error instanceof HttpError) {
+  //     setNotification({ title: error.title, message: error.message });
+  //   }
+  // }, [error, setNotification]);
 
   //** Logout if unauthorized **//
-  const unauthorized = error instanceof HttpError && error.statusCode === 401;
+  // const unauthorized = error instanceof HttpError && error.statusCode === 401;
+  const unauthorized = false
   React.useEffect(() => {
     const logoutAsync = async () => {
       if (unauthorized && logout) {

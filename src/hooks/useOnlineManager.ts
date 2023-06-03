@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import NetInfo from '@react-native-community/netinfo';
 import { onlineManager } from 'react-query';
 import { Platform } from 'react-native';

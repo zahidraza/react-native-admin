@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import * as SecureStore from 'expo-secure-store';
 
-import { HttpError } from '../HttpError';
+// import { HttpError } from '../HttpError';
 import type {
   Auth,
   AuthProvider,
@@ -103,12 +103,13 @@ export const AuthContextProvider = ({
             role,
           });
         } catch (error) {
-          if (error instanceof HttpError) {
-            setNotification({
-              title: error.title || error.statusText || 'Error',
-              message: error.message,
-            });
-          } else if (error instanceof Error) {
+          // if (error instanceof HttpError) {
+          //   setNotification({
+          //     title: error.title || error.statusText || 'Error',
+          //     message: error.message,
+          //   });
+          // } else
+          if (error instanceof Error) {
             setNotification({ title: 'Error', message: error.message });
           }
           setAuthState((prev) => ({ ...prev, authenticating: false }));
@@ -129,12 +130,13 @@ export const AuthContextProvider = ({
             ...authParams,
           });
         } catch (error) {
-          if (error instanceof HttpError) {
-            setNotification({
-              title: error.title || error.statusText || 'Error',
-              message: error.message,
-            });
-          } else if (error instanceof Error) {
+          // if (error instanceof HttpError) {
+          //   setNotification({
+          //     title: error.title || error.statusText || 'Error',
+          //     message: error.message,
+          //   });
+          // } else
+          if (error instanceof Error) {
             setNotification({ title: 'Error', message: error.message });
           }
         }

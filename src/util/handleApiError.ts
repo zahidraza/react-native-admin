@@ -1,8 +1,8 @@
 import type { AxiosError } from 'axios';
-import { HttpError } from '../HttpError';
+// import { HttpError } from '../HttpError';
 import { isEmpty } from './helpers';
 
-export const handleApiError = (error: AxiosError): HttpError => {
+export const handleApiError = (error: AxiosError): Error => {
   let statusCode: number | undefined,
     statusText: string | undefined,
     title: string | undefined,
@@ -51,5 +51,6 @@ export const handleApiError = (error: AxiosError): HttpError => {
     }
   }
 
-  return new HttpError(message, statusCode, statusText, title);
+  // return new HttpError(message, statusCode, statusText, title);
+  return new Error(message);
 };

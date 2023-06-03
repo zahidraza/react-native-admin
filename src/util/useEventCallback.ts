@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 // allow the hook to work in SSR
 const useLayoutEffect =

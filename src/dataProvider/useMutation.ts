@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   UseMutationOptions,
   useMutation as useRMutation,
@@ -12,7 +12,7 @@ import type {
   Variables,
 } from '../types';
 import { useAuth } from '../auth/useAuth';
-import { HttpError } from '../HttpError';
+// import { HttpError } from '../HttpError';
 import { useStore } from '../store/useStore';
 import { useDataProvider } from './useDataProvider';
 import type { AxiosError } from 'axios';
@@ -50,15 +50,16 @@ export function useMutation<TVariables = Variables, TData = Record>(
   );
 
   //** Handle Error Notification **//
-  const error = mutationResult.error;
-  React.useEffect(() => {
-    if (error instanceof HttpError) {
-      setNotification({ title: error.title, message: error.message });
-    }
-  }, [error, setNotification]);
+  // const error = mutationResult.error;
+  // React.useEffect(() => {
+  //   if (error instanceof HttpError) {
+  //     setNotification({ title: error.title, message: error.message });
+  //   }
+  // }, [error, setNotification]);
 
   //** Logout if unauthorized **//
-  const unauthorized = error instanceof HttpError && error.statusCode === 401;
+  // const unauthorized = error instanceof HttpError && error.statusCode === 401;
+  const unauthorized = false;
   React.useEffect(() => {
     const logoutAsync = async () => {
       if (unauthorized && logout) {

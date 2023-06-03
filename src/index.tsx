@@ -1,4 +1,4 @@
-export * from './HttpError';
+// export * from './HttpError';
 export * from './App';
 export * from './auth';
 export * from './dataProvider';

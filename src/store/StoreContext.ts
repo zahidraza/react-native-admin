@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import type { Store } from './types';
 import { asyncStore } from './asyncStore';
