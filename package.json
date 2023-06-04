@@ -1,6 +1,6 @@
 {
   "name": "@jazasoft/react-native-admin",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Framework for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
