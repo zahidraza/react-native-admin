@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-admin": ["./src/index"]
+      "@jazasoft/react-native-admin": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
