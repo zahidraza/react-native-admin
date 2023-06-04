@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-export function App(props: any) {
+function App(props: any) {
   return <View style={styles.container}>{props.children}</View>;
 }
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {

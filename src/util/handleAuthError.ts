@@ -1,5 +1,5 @@
 import type { AxiosError } from 'axios';
-import { HttpError } from '../HttpError';
+import HttpError from '../HttpError';
 
 export const handleAuthError = (error: AxiosError): Error => {
   let statusCode: number = 0,

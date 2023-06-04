@@ -1,5 +1,5 @@
 import type { AxiosError } from 'axios';
-import { HttpError } from '../HttpError';
+import HttpError from '../HttpError';
 import { isEmpty } from './helpers';
 
 export const handleApiError = (error: AxiosError): Error => {

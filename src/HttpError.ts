@@ -1,4 +1,4 @@
-export class HttpError extends Error {
+class HttpError extends Error {
   public statusCode?: number;
   public statusText?: string;
   public title?: string;
@@ -16,3 +16,5 @@ export class HttpError extends Error {
     this.title = title;
   }
 }
+
+export default HttpError;
