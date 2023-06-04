@@ -58,6 +58,25 @@ export interface AuthProvider {
   getIdentity: () => Promise<UserIdentity>;
 }
 
+export interface AuthContextProviderProps {
+  authProvider?: AuthProvider;
+  children: React.ReactNode;
+}
+
+export interface AuthOptions {
+  appId?: string; // Application Id
+  loginPath?: string; // API End point for login e.g - /ouath/token
+  logoutPath?: string; // API End point for login e.g - /logout
+  passwordChangePath?: string; // API End point for logout e.g - /changePassword
+  identityPath?: string; // API End point for user identity e.g - /profile
+  clientId?: string; // Client Id for basic basic authorization of client
+  clientSecret?: string; // Client Secret for basic basic authorization of client
+  loginParse?: (data: any, allowedRoleIds: string[]) => LoginResult; // Parse Response and return Login Result
+  axiosOptions?: AxiosRequestConfig;
+  allowedRoleIds?: string[];
+  log?: boolean;
+}
+
 export interface QueryOptions<TQueryFnData = Record, TData = Record>
   extends Omit<
     UseQueryOptions<TQueryFnData, AxiosError, TData, QueryKey>,
@@ -79,6 +98,12 @@ export interface DataProvider {
   mutation: (options: DataProviderOptions) => Promise<any>;
 }
 
+export interface DataOptions {
+  basePath?: string;
+  timeout?: number;
+  log?: boolean;
+}
+
 export type Translate = (key: string, options?: any) => string;
 
 export type Locale = {
@@ -93,6 +118,11 @@ export interface I18nProvider {
   getLocale: () => string;
   getLocales?: () => Locale[];
   [key: string]: any;
+}
+
+export interface I18nContextProviderProps {
+  i18nProvider: I18nProvider;
+  children: React.ReactNode;
 }
 
 export interface Notification {
