@@ -1,20 +1,10 @@
 import * as React from 'react';
 
-import { useStoreContext } from './useStoreContext';
-import useEventCallback from '../hooks/useEventCallback';
-import { useDeepEffect } from '../hooks/useDeepEffect';
+import { useEventCallback, useDeepEffect } from '../hooks';
+import useStoreContext from './useStoreContext';
+import type { useStoreResult } from './types';
 
-export type useStoreResult<T = any> = [
-  T | undefined,
-  (value: T, defaultValue?: T) => void
-];
-
-// export type useStoreResult<T = any> = [
-//   T | undefined,
-//   (value: T | ((value: T) => void), defaultValue?: T) => void
-// ];
-
-export const useStore = <T = any>(
+const useStore = <T = any>(
   key: string,
   defaultValue?: T
 ): useStoreResult<T> => {
@@ -58,3 +48,5 @@ export const useStore = <T = any>(
   );
   return [value, set];
 };
+
+export default useStore;

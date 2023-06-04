@@ -1,7 +1,7 @@
 /* eslint-disable no-bitwise, no-div-regex, eqeqeq */
 const chars =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
-export const Base64 = {
+const Base64 = {
   btoa: (input: string = '') => {
     let str = input;
     let output = '';
@@ -47,3 +47,5 @@ export const Base64 = {
     return output;
   },
 };
+
+export default Base64;

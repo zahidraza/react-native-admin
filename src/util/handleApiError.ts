@@ -2,7 +2,7 @@ import type { AxiosError } from 'axios';
 import HttpError from '../HttpError';
 import { isEmpty } from './helpers';
 
-export const handleApiError = (error: AxiosError): Error => {
+const handleApiError = (error: AxiosError): Error => {
   let statusCode: number | undefined,
     statusText: string | undefined,
     title: string | undefined,
@@ -52,6 +52,6 @@ export const handleApiError = (error: AxiosError): Error => {
   }
 
   return new HttpError(message, statusCode, statusText, title);
-  // console.log({ message, statusCode, statusText, title });
-  // return new Error(message);
 };
+
+export default handleApiError;

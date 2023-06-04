@@ -1,7 +1,7 @@
 import * as React from 'react';
 import isEqual from 'fast-deep-equal';
 
-export const useDeepEffect = (
+const useDeepEffect = (
   effect: React.EffectCallback,
   deps?: React.DependencyList | undefined
 ) => {
@@ -21,3 +21,5 @@ export const useDeepEffect = (
   /* eslint-disable-next-line react-hooks/exhaustive-deps */
   React.useEffect(effect, depsRef.current);
 };
+
+export default useDeepEffect;

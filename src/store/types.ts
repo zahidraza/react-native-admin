@@ -6,3 +6,13 @@ export interface Store {
   removeItems: (keyPrefix: string) => Promise<void>;
   subscribe: (key: string, callback: (value: any) => void) => () => void;
 }
+
+export interface StoreContextProviderProps {
+  store: Store;
+  children: React.ReactNode;
+}
+
+export type useStoreResult<T = any> = [
+  T | undefined,
+  (value: T, defaultValue?: T) => void
+];

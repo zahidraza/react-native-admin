@@ -1,13 +1,8 @@
 import * as React from 'react';
-import { StoreContext } from './StoreContext';
-import type { Store } from './types';
+import StoreContext from './StoreContext';
+import type { StoreContextProviderProps } from './types';
 
-export interface StoreContextProviderProps {
-  store: Store;
-  children: React.ReactNode;
-}
-
-export const StoreContextProvider = ({
+const StoreContextProvider = ({
   store,
   children,
 }: StoreContextProviderProps) => {
@@ -18,3 +13,5 @@ export const StoreContextProvider = ({
     <StoreContext.Provider value={store}>{children}</StoreContext.Provider>
   );
 };
+
+export default StoreContextProvider;

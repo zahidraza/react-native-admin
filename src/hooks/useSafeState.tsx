@@ -1,7 +1,7 @@
 import * as React from 'react';
 import isEqual from 'fast-deep-equal';
 
-export function useSafeState<T>(initialState: T) {
+function useSafeState<T>(initialState: T) {
   const [state, setState] = React.useState<T>(initialState);
 
   const mountedRef = React.useRef(false);
@@ -26,3 +26,5 @@ export function useSafeState<T>(initialState: T) {
 
   return [state, safeSetState];
 }
+
+export default useSafeState;

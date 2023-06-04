@@ -1,7 +1,7 @@
 import * as React from 'react';
 import isEqual from 'fast-deep-equal';
 
-export function useDeepMemo<T>(
+function useDeepMemo<T>(
   memoFun: () => T,
   deps: React.DependencyList | undefined
 ) {
@@ -21,3 +21,5 @@ export function useDeepMemo<T>(
   /* eslint-disable-next-line react-hooks/exhaustive-deps */
   return React.useMemo(memoFun, depsRef.current);
 }
+
+export default useDeepMemo;

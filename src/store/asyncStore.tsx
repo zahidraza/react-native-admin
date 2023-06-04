@@ -7,7 +7,7 @@ type Subscription = {
   callback: (value: any) => void;
 };
 
-export const asyncStore = (version: string = '1_0_0'): Store => {
+const asyncStore = (version: string = '1_0_0'): Store => {
   const prefix = `Store`;
   const prefixLength = prefix.length;
 
@@ -76,6 +76,8 @@ export const asyncStore = (version: string = '1_0_0'): Store => {
     },
   };
 };
+
+export default asyncStore;
 
 const tryParse = (value: string): any => {
   if (

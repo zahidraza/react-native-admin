@@ -1,7 +1,7 @@
 import * as React from 'react';
 import isEqual from 'fast-deep-equal';
 
-export function useDeepCallback<T extends (...args: any[]) => any>(
+function useDeepCallback<T extends (...args: any[]) => any>(
   callback: T,
   deps: React.DependencyList
 ) {
@@ -21,3 +21,5 @@ export function useDeepCallback<T extends (...args: any[]) => any>(
   /* eslint-disable-next-line react-hooks/exhaustive-deps */
   return React.useCallback(callback, depsRef.current || []);
 }
+
+export default useDeepCallback;
