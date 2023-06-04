@@ -1,7 +1,7 @@
 import type { AxiosError, AxiosRequestConfig } from 'axios';
 import type { I18n } from 'i18n-js/typings';
 import type { UseQueryOptions, QueryClient, QueryKey } from 'react-query';
-import type { Store } from './store/types';
+// import type { Store } from './store/types';
 
 export type ApiUrl = string | (() => Promise<string>);
 
@@ -102,7 +102,7 @@ export interface Notification {
 }
 
 export interface AppProps {
-  store: Store;
+  // store: Store;
   i18nProvider: I18nProvider;
   authProvider: AuthProvider;
   dataProvider: DataProvider;

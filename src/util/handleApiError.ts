@@ -52,5 +52,6 @@ export const handleApiError = (error: AxiosError): Error => {
   }
 
   // return new HttpError(message, statusCode, statusText, title);
+  console.log({ message, statusCode, statusText, title });
   return new Error(message);
 };
