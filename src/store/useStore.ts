@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import { useEventCallback, useDeepEffect } from '../hooks';
+import useEventCallback from '../hooks/useEventCallback';
+import useDeepEffect from '../hooks/useDeepEffect';
 import useStoreContext from './useStoreContext';
 import type { useStoreResult } from './types';
 

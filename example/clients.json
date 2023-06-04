@@ -1,0 +1,312 @@
+[
+  {
+    "tenantId": "dev",
+    "tenantName": "Development",
+    "local": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-dev.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-dev.jaza-soft.com"
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-dev.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-dev.jaza-soft.com"
+      }
+    }
+  },
+  {
+    "tenantId": "mkt",
+    "tenantName": "Marketing",
+    "local": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-mkt.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-mkt.jaza-soft.com"
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-mkt.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-mkt.jaza-soft.com"
+      }
+    }
+  },
+  {
+    "tenantId": "laguna",
+    "tenantName": "Laguna Clothing",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "192.168.2.11",
+        "port": 8050
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "192.168.2.11",
+        "port": 8081
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-laguna.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-laguna.jaza-soft.com"
+      }
+    }
+  },
+  {
+    "tenantId": "laguna_sampling",
+    "tenantName": "Laguna Clothing - Sampling",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "192.168.1.125",
+        "port": 8050
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "192.168.1.125",
+        "port": 8081
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "http",
+        "host": "122.166.181.212",
+        "port": 8050
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "122.166.181.212",
+        "port": 8081
+      }
+    }
+  },
+  {
+    "tenantId": "ranger",
+    "tenantName": "Ranger Apparel",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "10.0.40.40"
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "10.0.40.40",
+        "port": 8081
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "http",
+        "host": "14.98.5.82"
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "14.98.5.82",
+        "port": 8081
+      }
+    }
+  },
+  {
+    "tenantId": "sunlord",
+    "tenantName": "Sunlord Apparel",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "192.168.0.77",
+        "port": 8050
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "192.168.0.77",
+        "port": 8081
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-sunlord.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-sunlord.jaza-soft.com"
+      }
+    }
+  },
+  {
+    "tenantId": "tkl-mada",
+    "tenantName": "Tropic Knits Limited - Madagascar",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "192.168.51.33",
+        "port": 8050
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "192.168.51.33",
+        "port": 8081
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-tkl-mada.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-tkl-mada.jaza-soft.com"
+      }
+    }
+  },
+  {
+    "tenantId": "apollo",
+    "tenantName": "Apollo International - Footwear Division",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "172.20.0.15",
+        "port": 8050
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "172.20.0.15",
+        "port": 8081
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-apollo.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-apollo.jaza-soft.com"
+      }
+    }
+  },
+  {
+    "tenantId": "anubhav",
+    "tenantName": "Anubhav Apparel",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "192.168.6.197",
+        "port": 8050
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "192.168.6.197",
+        "port": 8081
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-anubhav.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-anubhav.jaza-soft.com"
+      }
+    }
+  },
+  {
+    "tenantId": "apollofs",
+    "tenantName": "Apollo - Footwear Sampling",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "172.20.0.15",
+        "port": 8051
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "172.20.0.15",
+        "port": 8082
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-apollofs.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-apollofs.jaza-soft.com"
+      }
+    }
+  },
+  {
+    "tenantId": "indocount",
+    "tenantName": "Indo Count",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "10.61.2.31",
+        "port": 8050
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "10.61.2.31",
+        "port": 8081
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-icilbh.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-icilbh.jaza-soft.com"
+      }
+    }
+  },
+  {
+    "tenantId": "zeel",
+    "tenantName": "Zeel Rainwear",
+    "local": {
+      "app": {
+        "scheme": "http",
+        "host": "10.1.1.6",
+        "port": 8050
+      },
+      "iam": {
+        "scheme": "http",
+        "host": "10.1.1.6",
+        "port": 8081
+      }
+    },
+    "remote": {
+      "app": {
+        "scheme": "https",
+        "host": "optafloor-zeel.jaza-soft.com"
+      },
+      "iam": {
+        "scheme": "https",
+        "host": "iam-zeel.jaza-soft.com"
+      }
+    }
+  }
+]
