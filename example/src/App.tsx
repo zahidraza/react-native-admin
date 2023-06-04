@@ -1,19 +1,18 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply, Button } from '@jazasoft/react-native-admin';
+import { Button } from '@jazasoft/react-native-admin';
 
 export default function MyApp() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const [result, setResult] = React.useState<number | undefined>(21);
 
   return (
     <View style={styles.container}>
       <Text>Result: {result}</Text>
-      <Button label="Click" onPress={() => console.log('button clicked')} />
+      <Button
+        label="Click"
+        onPress={() => setResult(Math.round(Math.random() * 100))}
+      />
     </View>
   );
 }
