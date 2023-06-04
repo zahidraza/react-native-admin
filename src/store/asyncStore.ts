@@ -32,13 +32,13 @@ const asyncStore = (version: string = '1_0_0'): Store => {
       }
       await AsyncStorage.setItem(`${prefix}.version`, version);
     },
-    getItem: async <T = any,>(key: string, defaultValue?: T) => {
+    getItem: async <T = any>(key: string, defaultValue?: T) => {
       const valueFromStorage = await AsyncStorage.getItem(`${prefix}.${key}`);
       return valueFromStorage === null || valueFromStorage === undefined
         ? defaultValue
         : tryParse(valueFromStorage);
     },
-    setItem: async <T = any,>(key: string, value: T) => {
+    setItem: async <T = any>(key: string, value: T) => {
       if (value === undefined || value === null) {
         await AsyncStorage.removeItem(`${prefix}.${key}`);
       } else {
