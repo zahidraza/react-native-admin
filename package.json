@@ -42,14 +42,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaza-soft/react-native-admin.git"
+    "url": "git+https://github.com/zahidraza/react-native-admin.git"
   },
   "author": "Md Zahid Raza <zahid.raza@jazasoft.com> (https://github.com/zahidraza)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaza-soft/react-native-admin.git/issues"
+    "url": "https://github.com/zahidraza/react-native-admin.git/issues"
   },
-  "homepage": "https://github.com/jaza-soft/react-native-admin.git#readme",
+  "homepage": "https://github.com/zahidraza/react-native-admin.git#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
