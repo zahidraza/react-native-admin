@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq, no-self-compare */
 export function isEqual(a: any, b: any) {
   if (a === b) return true;
 
