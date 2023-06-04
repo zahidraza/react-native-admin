@@ -1,5 +1,5 @@
 import type { AxiosError } from 'axios';
-// import { HttpError } from '../HttpError';
+import { HttpError } from '../HttpError';
 
 export const handleAuthError = (error: AxiosError): Error => {
   let statusCode: number = 0,
@@ -47,7 +47,7 @@ export const handleAuthError = (error: AxiosError): Error => {
         JSON.stringify(data);
     }
   }
-  // return new HttpError(message, statusCode, statusText, title);
-  console.log({ message, statusCode, statusText, title });
-  return new Error(message);
+  return new HttpError(message, statusCode, statusText, title);
+  // console.log({ message, statusCode, statusText, title });
+  // return new Error(message);
 };
