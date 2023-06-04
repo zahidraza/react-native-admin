@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { isEqual } from '../util';
+import isEqual from 'fast-deep-equal';
 
 export const useDeepEffect = (
   effect: React.EffectCallback,
